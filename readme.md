@@ -1,6 +1,6 @@
 # db-meinferbus-cities
 
-Get all DB stations located in the same city as the given Meinfernbus location, and vice versa.
+Get all DB stations located in the same city as the given Flixbus/Meinfernbus location, and vice versa.
 
 [![npm version](https://img.shields.io/npm/v/db-meinfernbus-cities.svg)](https://www.npmjs.com/package/db-meinfernbus-cities)
 [![Build Status](https://travis-ci.org/juliuste/db-meinfernbus-cities.svg?branch=master)](https://travis-ci.org/juliuste/db-meinfernbus-cities)
@@ -25,6 +25,10 @@ adapter({type: 'station', id: 1, operator: 'meinfernbus'}).then(…) // list of 
 
 adapter({id: 8089079, operator: 'db'}).then(…) // Meinfernbus city object for Berlin
 ```
+
+## Similar Projects
+
+- [meinfernbus](https://github.com/juliuste/meinfernbus/) – "JavaScript client for the Flixbus/Meinfernbus API."
 
 ## Contributing
 
