@@ -1,0 +1,41 @@
+{
+	"name": "db-meinfernbus-cities",
+	"description": "Get all DB stations located in the same city as the given Meinfernbus location, and vice versa.",
+	"version": "0.1.0",
+	"keywords": [
+		"bus",
+		"bahn",
+		"train",
+		"railway",
+		"adapter",
+		"deutsche bahn",
+		"city",
+		"flixbus",
+		"meinfernbus",
+		"germany",
+		"deutschland"
+	],
+	"author": "Julius Tens <mail@juliustens.de>",
+	"homepage": "https://github.com/juliuste/db-meinfernbus-cities",
+	"repository": "juliuste/db-meinfernbus-cities",
+	"bugs": "https://github.com/juliuste/db-meinfernbus-cities/issues",
+	"main": "index.js",
+	"files": ["index.js"],
+	"dependencies": {
+		"meinfernbus": "^0.1.2",
+		"db-stations": "^0.3.0",
+		"lodash": "^4.15.0",
+		"stream-to-promise": "^2.2.0",
+		"zip-to-city": "^0.1.0"
+	},
+	"devDependencies": {
+	},
+	"scripts": {
+		"test": "node test.js",
+		"prepublish": "npm test"
+	},
+	"engine" : {
+		"node" : ">=6"
+	},
+	"license": "MIT"
+}
