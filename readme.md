@@ -29,6 +29,7 @@ adapter({id: 8089079, operator: 'db'}).then(…) // Meinfernbus city object for 
 ## Similar Projects
 
 - [meinfernbus](https://github.com/juliuste/meinfernbus/) – "JavaScript client for the Flixbus/Meinfernbus API."
+- [search-meinfernbus-locations](https://github.com/derhuerst/search-meinfernbus-locations/) - "Search for Flixbus/MeinFernbus cities & stations."
 - [db-hafas](https://github.com/derhuerst/db-hafas/) - "JavaScript client for the DB Hafas API."
 - [db-stations](https://github.com/derhuerst/db-stations/) - "A list of DB stations."
 
