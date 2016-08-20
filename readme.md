@@ -20,8 +20,8 @@ _Requests may take a few seconds._ The adapter only works for german cities/stat
 ```js
 const adapter = require('db-meinfernbus-cities')
 
-adapter({type: 'city', id: 88, operator: 'meinfernbus'}).then(…) // list of db-station objects in berlin
-adapter({type: 'station', id: 1, operator: 'meinfernbus'}).then(…) // list of db-station objects in berlin
+adapter({type: 'city', id: 88, operator: 'meinfernbus'}).then(…) // list of db-station objects in Berlin
+adapter({type: 'station', id: 1, operator: 'meinfernbus'}).then(…) // list of db-station objects in Berlin
 
 adapter({id: 8089079, operator: 'db'}).then(…) // Meinfernbus city object for Berlin
 ```
