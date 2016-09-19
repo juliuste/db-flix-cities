@@ -27,6 +27,7 @@ const dbByCity = (city) => {
 }
 
 const mfbByCity = (station) => {
+	console.log(station)
 	return mfb.locations.cities().then((locations) => {
 		let res = lodash.filter(locations, {name: station.city})
 		if(res && res.length>0) return res
