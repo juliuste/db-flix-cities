@@ -15,7 +15,7 @@ npm install db-meinfernbus-cities
 ```
 
 ## Usage
-_Requests may take a few seconds._ The adapter only works for german cities/stations at the moment, I am working on expanding it on other (neighbouring) european countries, though.
+_Requests may take a few seconds._ The adapter only works for german cities/stations at the moment, I am working on expanding it to other (neighbouring) european countries, though.
 
 ```js
 const adapter = require('db-meinfernbus-cities')
