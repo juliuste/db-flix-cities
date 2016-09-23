@@ -4,7 +4,16 @@ const db = require('db-stations')
 const mfb = require('meinfernbus')
 const lodash = require('lodash')
 const s2p = require('stream-to-promise')
-const unzip = require('zip-to-city')
+const postalCode = require('postal-code')
+
+const plz = (zip) => {
+	const result = postalCode(zip)
+	if(result){
+		if(['Berlin', 'Bremen', 'Hamburg'].indexOf(result.regions[0])==-1) return result.districts[0]
+		else return result.regions[0]
+	}
+	return result
+}
 
 
 const err = (error) => {throw error}
@@ -15,9 +24,9 @@ const dbByCity = (city) => {
 		if(res && res.length>0) return res
 		else{
 			if(city.country.code=='DE'){
-				let zipmatch = unzip(city.zip)
-				if(zipmatch){
-					res = lodash.filter(stations, function(o){return unzip(o.zip)==zipmatch})
+				let postal = plz(city.zip)
+				if(postal){
+					res = lodash.filter(stations, function(o){return plz(o.zip)==postal})
 					if(res && res.length>0) return res
 				}
 			}
@@ -27,15 +36,14 @@ const dbByCity = (city) => {
 }
 
 const mfbByCity = (station) => {
-	console.log(station)
 	return mfb.locations.cities().then((locations) => {
 		let res = lodash.filter(locations, {name: station.city})
 		if(res && res.length>0) return res
 		else{
 			if((station.zip+'').length==4) station.zip='0'+station.zip
-			let zipmatch = unzip(station.zip)
-			if(zipmatch){
-				res = lodash.filter(locations, function(o){return unzip(o.zip)==zipmatch})
+			let postal = plz(station.zip)
+			if(postal){
+				res = lodash.filter(locations, function(o){return plz(o.zip)==postal})
 				if(res && res.length>0) return res
 			}
 			return null
