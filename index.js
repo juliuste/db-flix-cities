@@ -30,7 +30,7 @@ const dbByCity = (city) => {
 					if(res && res.length>0) return res
 				}
 			}
-			return null
+			return []
 		}
 	}, err)
 }
@@ -46,7 +46,7 @@ const mfbByCity = (station) => {
 				res = lodash.filter(locations, function(o){return plz(o.zip)==postal})
 				if(res && res.length>0) return res
 			}
-			return null
+			return []
 		}
 	}, err)
 }

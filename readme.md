@@ -23,7 +23,7 @@ const adapter = require('db-meinfernbus-cities')
 adapter({type: 'city', id: 88, operator: 'meinfernbus'}).then(…) // list of db-station objects in Berlin
 adapter({type: 'station', id: 1, operator: 'meinfernbus'}).then(…) // list of db-station objects in Berlin
 
-adapter({id: 8089079, operator: 'db'}).then(…) // Meinfernbus city object for Berlin
+adapter({id: 8089079, operator: 'db'}).then(…) // list of Meinfernbus city objects for Berlin (should normally contain 0 or 1 element)
 ```
 
 ## Similar Projects
