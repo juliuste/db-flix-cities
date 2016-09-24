@@ -7,47 +7,42 @@ const s2p = require('stream-to-promise')
 const postalCode = require('postal-code')
 
 const plz = (zip) => {
-	const result = postalCode(zip)
-	if(result){
-		if(['Berlin', 'Bremen', 'Hamburg'].indexOf(result.regions[0])==-1) return result.districts[0]
-		else return result.regions[0]
+	if(!zip) return null
+	try{
+		const result = postalCode.get(zip)
+		if(result){
+			if(['Berlin', 'Bremen', 'Hamburg'].indexOf(result.regions[0])==-1) return result.districts[0]
+			else return result.regions[0]
+		}
+		return result
 	}
-	return result
+	catch(error){return null}
 }
 
 
 const err = (error) => {throw error}
 
-const dbByCity = (city) => {
+const dbByStation = (station) => {
 	return s2p(db()).then((stations) => {
-		let res = lodash.filter(stations, {city: city.name})
-		if(res && res.length>0) return res
-		else{
-			if(city.country.code=='DE'){
-				let postal = plz(city.zip)
-				if(postal){
-					res = lodash.filter(stations, function(o){return plz(o.zip)==postal})
-					if(res && res.length>0) return res
-				}
+		if(station.country.code=='DE'){
+			let postal = plz(station.zip)
+			if(postal){
+				let res = lodash.filter(stations, function(o){return plz(o.zip)==postal})
+				if(res && res.length>0) return res
 			}
-			return []
 		}
+		return []
 	}, err)
 }
 
 const mfbByCity = (station) => {
-	return mfb.locations.cities().then((locations) => {
-		let res = lodash.filter(locations, {name: station.city})
-		if(res && res.length>0) return res
-		else{
-			if((station.zip+'').length==4) station.zip='0'+station.zip
-			let postal = plz(station.zip)
-			if(postal){
-				res = lodash.filter(locations, function(o){return plz(o.zip)==postal})
-				if(res && res.length>0) return res
-			}
-			return []
+	return mfb.locations.stations().then((locations) => {
+		let postal = plz(station.zip)
+		if(postal){
+			let res = lodash.filter(locations, function(o){return plz(o.zip)==postal})
+			if(res && res.length>0) return mfb.locations.cities().then((cities) => lodash.filter(cities, {id: res[0].city})[0], err)
 		}
+		return []
 	}, err)
 }
 
@@ -69,11 +64,11 @@ const search = (location) => {
 		return mfblocations().then((locations) => {
 			let res = lodash.find(locations, {id: location.id})
 			if(res){
-				if(location.type==='station'){
-					return search({type: 'city', operator: location.operator, id: res.city})
+				if(location.type==='city'){
+					return search({type: 'station', operator: location.operator, id: res.stations[0]})
 				}
 				else{
-					return dbByCity(res)
+					return dbByStation(res)
 				}
 			}
 			else err(new Error('Meinfernbus location not found for given ID.'))

@@ -10,5 +10,6 @@ const fails = (err) => {
 
 cities({type: 'station', id: 1, operator: 'meinfernbus'}).then(works, fails)
 cities({type: 'city', id: 88, operator: 'meinfernbus'}).then(works, fails)
+cities({type: 'city', id: 96, operator: 'meinfernbus'}).then(works, fails)
 cities({id: 8089079, operator: 'db'}).then(works, fails)
 cities({id: 8010205, operator: 'db'}).then(works, fails)

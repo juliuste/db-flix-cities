@@ -1,7 +1,7 @@
 {
   "name": "db-meinfernbus-cities",
   "description": "Get all DB stations located in the same city as the given Meinfernbus location, and vice versa.",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "keywords": [
     "bus",
     "bahn",
