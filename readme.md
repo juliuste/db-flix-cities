@@ -1,5 +1,7 @@
 # db-meinferbus-cities
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/db-meinfernbus-cities.svg)](https://greenkeeper.io/)
+
 Get all DB stations located in the same city as the given Flixbus/Meinfernbus location, and vice versa.
 
 [![npm version](https://img.shields.io/npm/v/db-meinfernbus-cities.svg)](https://www.npmjs.com/package/db-meinfernbus-cities)
