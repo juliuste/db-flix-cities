@@ -1,14 +1,12 @@
 # db-meinferbus-cities
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/db-meinfernbus-cities.svg)](https://greenkeeper.io/)
-
 Get all DB stations located in the same city as the given Flixbus/Meinfernbus location, and vice versa.
 
 [![npm version](https://img.shields.io/npm/v/db-meinfernbus-cities.svg)](https://www.npmjs.com/package/db-meinfernbus-cities)
 [![Build Status](https://travis-ci.org/juliuste/db-meinfernbus-cities.svg?branch=master)](https://travis-ci.org/juliuste/db-meinfernbus-cities)
 [![dependency status](https://img.shields.io/david/juliuste/db-meinfernbus-cities.svg)](https://david-dm.org/juliuste/db-meinfernbus-cities)
 [![dev dependency status](https://img.shields.io/david/dev/juliuste/db-meinfernbus-cities.svg)](https://david-dm.org/juliuste/db-meinfernbus-cities#info=devDependencies)
-[![license](https://img.shields.io/github/license/juliuste/projections.svg?style=flat)](LICENSE)
+[![license](https://img.shields.io/github/license/juliuste/db-meinfernbus-cities.svg?style=flat)](LICENSE)
 
 ## Installation
 
