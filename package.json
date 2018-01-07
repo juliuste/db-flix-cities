@@ -33,7 +33,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "node test.js",
-    "prepublish": "npm test"
+    "prepare": "npm test"
   },
   "engine": {
     "node": ">=6"
