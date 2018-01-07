@@ -26,7 +26,7 @@
   "dependencies": {
     "db-stations": "^1.18.0",
     "lodash": "^4.15.0",
-    "meinfernbus": "^2.0.0",
+    "meinfernbus": "^3.0.0",
     "postal-code": "0.0.5",
     "stream-to-promise": "^2.2.0"
   },
