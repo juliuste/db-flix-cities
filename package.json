@@ -24,7 +24,7 @@
     "index.js"
   ],
   "dependencies": {
-    "db-stations": "^1.18.0",
+    "db-stations": "^2.0.0",
     "lodash": "^4.15.0",
     "meinfernbus": "^2.0.0",
     "postal-code": "0.0.5",
