@@ -6,7 +6,6 @@ Get all DB stations located in the same city as the given Flixbus/Meinfernbus re
 [![Build Status](https://travis-ci.org/juliuste/db-meinfernbus-cities.svg?branch=master)](https://travis-ci.org/juliuste/db-meinfernbus-cities)
 [![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/db-meinfernbus-cities.svg)](https://greenkeeper.io/)
 [![dependency status](https://img.shields.io/david/juliuste/db-meinfernbus-cities.svg)](https://david-dm.org/juliuste/db-meinfernbus-cities)
-[![dev dependency status](https://img.shields.io/david/dev/juliuste/db-meinfernbus-cities.svg)](https://david-dm.org/juliuste/db-meinfernbus-cities#info=devDependencies)
 [![license](https://img.shields.io/github/license/juliuste/db-meinfernbus-cities.svg?style=flat)](LICENSE)
 [![chat on gitter](https://badges.gitter.im/juliuste.svg)](https://gitter.im/juliuste)
 
