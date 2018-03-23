@@ -19,7 +19,7 @@
   "homepage": "https://github.com/juliuste/db-meinfernbus-cities",
   "repository": "juliuste/db-meinfernbus-cities",
   "bugs": "https://github.com/juliuste/db-meinfernbus-cities/issues",
-  "main": "index.js",
+  "main": "./index.js",
   "files": [
     "index.js"
   ],
