@@ -1,7 +1,7 @@
 {
   "name": "db-meinfernbus-cities",
   "description": "Get all DB stations located in the same german city as the given Flixbus/Meinfernbus station/region, and vice versa.",
-  "version": "0.3.1",
+  "version": "1.0.0",
   "keywords": [
     "bus",
     "bahn",
