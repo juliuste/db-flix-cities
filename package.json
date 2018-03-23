@@ -21,22 +21,30 @@
   "bugs": "https://github.com/juliuste/db-meinfernbus-cities/issues",
   "main": "./index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "lib/*"
   ],
   "dependencies": {
-    "db-stations": "^1.18.0",
-    "lodash": "^4.15.0",
-    "meinfernbus": "^2.0.0",
+    "@turf/distance": "^5.1.5",
+    "@turf/helpers": "^5.1.5",
+    "db-stations": "^2.5.0",
+    "lodash": "^4.17.5",
+    "match-german-federal-states": "^0.1.0",
+    "meinfernbus": "^4.0.0",
     "postal-code": "0.0.5",
-    "stream-to-promise": "^2.2.0"
+    "stream-to-array": "^2.3.0",
+    "through2-filter": "^2.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "tape": "^4.9.0",
+    "validate-fptf": "^1.2.4"
+  },
   "scripts": {
     "test": "node test.js",
     "prepare": "npm test"
   },
   "engine": {
-    "node": ">=6"
+    "node": ">=8"
   },
   "license": "ISC"
 }
