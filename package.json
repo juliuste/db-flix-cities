@@ -1,7 +1,7 @@
 {
-  "name": "db-meinfernbus-cities",
-  "description": "Get all DB stations located in the same german city as the given Flixbus/Meinfernbus station/region, and vice versa.",
-  "version": "1.0.0",
+  "name": "db-flix-cities",
+  "description": "Get all DB stations located in the same german city as the given Flix (Flixbus/Flixtrain) station/region, and vice versa.",
+  "version": "1.0.1",
   "keywords": [
     "bus",
     "bahn",
@@ -12,13 +12,14 @@
     "city",
     "flixbus",
     "meinfernbus",
+    "flix",
     "germany",
     "deutschland"
   ],
   "author": "Julius Tens <mail@juliustens.eu>",
-  "homepage": "https://github.com/juliuste/db-meinfernbus-cities",
-  "repository": "juliuste/db-meinfernbus-cities",
-  "bugs": "https://github.com/juliuste/db-meinfernbus-cities/issues",
+  "homepage": "https://github.com/juliuste/db-flix-cities",
+  "repository": "juliuste/db-flix-cities",
+  "bugs": "https://github.com/juliuste/db-flix-cities/issues",
   "main": "./index.js",
   "files": [
     "index.js",
@@ -28,9 +29,9 @@
     "@turf/distance": "^6.0.1",
     "@turf/helpers": "^6.1.0",
     "db-stations": "^2.8.0",
+    "flix": "^4.0.1",
     "lodash": "^4.17.10",
     "match-german-federal-states": "^0.1.0",
-    "meinfernbus": "^4.0.0",
     "postal-code": "0.0.5",
     "stream-to-array": "^2.3.0",
     "through2-filter": "^3.0.0"

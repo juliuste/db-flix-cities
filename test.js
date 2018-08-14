@@ -4,7 +4,7 @@ const tape = require('tape')
 const validate = require('validate-fptf')
 const cities = require('./index')
 
-tape('db-meinfernbus-cities.toDB', async (t) => {
+tape('db-flix-cities.toDB', async (t) => {
 	const stuttgartResults = await cities.toDB({type: 'region', id: '101'}) // Stuttgart
 	t.ok(stuttgartResults.length > 5, 'results length')
 	stuttgartResults.every(r => validate(r))
@@ -22,16 +22,16 @@ tape('db-meinfernbus-cities.toDB', async (t) => {
 	t.end()
 })
 
-tape('db-meinfernbus-cities.toMFB', async (t) => {
-	const results = await cities.toMFB('8002841') // Münster-Hiltrup
+tape('db-flix-cities.toFlix', async (t) => {
+	const results = await cities.toFlix('8002841') // Münster-Hiltrup
 	t.ok(results.length > 0, 'results length')
 	results.every(r => validate(r))
 	t.ok(results.some(r => r.type === 'station' && r.id === '231' && r.name === 'Münster'), 'station münster')
 	t.end()
 })
 
-tape('db-meinfernbus-cities.toMFBRegions', async (t) => {
-	const results = await cities.toMFBRegions('8098553') // Hamburg Altona
+tape('db-flix-cities.toFlixRegions', async (t) => {
+	const results = await cities.toFlixRegions('8098553') // Hamburg Altona
 	t.ok(results.length === 1, 'results length')
 	results.every(r => validate(r))
 	t.ok(results.some(r => r.type === 'region' && r.id === '118' && r.name === 'Hamburg'), 'region hamburg')

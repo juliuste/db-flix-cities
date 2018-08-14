@@ -1,10 +1,10 @@
 'use strict'
 
 const db = require('./lib/toDB')
-const mfb = require('./lib/toMFB')
+const flix = require('./lib/toFlix')
 
 module.exports = {
     toDB: db,
-    toMFB: mfb.toMFB,
-    toMFBRegions: mfb.toMFBRegions
+    toFlix: flix.toFlix,
+    toFlixRegions: flix.toFlixRegions
 }
