@@ -7,6 +7,7 @@ Get all DB stations located in the same german city as the given Flix (Flixbus/F
 [![Greenkeeper badge](https://badges.greenkeeper.io/juliuste/db-flix-cities.svg)](https://greenkeeper.io/)
 [![dependency status](https://img.shields.io/david/juliuste/db-flix-cities.svg)](https://david-dm.org/juliuste/db-flix-cities)
 [![license](https://img.shields.io/github/license/juliuste/db-flix-cities.svg?style=flat)](LICENSE)
+[![fptf version](https://fptf.badges.juliustens.eu/badge/juliuste/db-flix-cities)](https://fptf.badges.juliustens.eu/link/juliuste/db-flix-cities)
 [![chat on gitter](https://badges.gitter.im/juliuste.svg)](https://gitter.im/juliuste)
 
 ## Installation
