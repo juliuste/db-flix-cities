@@ -28,7 +28,7 @@
   "dependencies": {
     "@turf/distance": "^6.0.1",
     "@turf/helpers": "^6.1.0",
-    "db-stations": "^2.8.0",
+    "db-stations": "^3.0.0",
     "flix": "^4.0.1",
     "lodash": "^4.17.10",
     "match-german-federal-states": "^0.1.0",
